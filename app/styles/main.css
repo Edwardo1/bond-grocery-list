@@ -9,3 +9,7 @@
     background: green;
     color: white;
 }
+a[href="#register"] {
+    display: block;
+    text-align: center;
+}
