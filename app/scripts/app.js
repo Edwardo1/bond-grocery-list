@@ -4,9 +4,17 @@
 
     var groceryDataSource = new kendo.data.DataSource({
         type: "everlive",
+        offlineStorage: "grocery-list",
         transport: {
             typeName: "Groceries"
         }
+    });
+
+    document.addEventListener("online", function() {
+        groceryDataSource.online(true);
+    });
+    document.addEventListener("offline", function() {
+        groceryDataSource.online(false);
     });
 
     function initialize() {
@@ -28,12 +36,12 @@
             }
 
             groceryDataSource.add({ Name: this.grocery });
-            groceryDataSource.one("sync", this.close);
             groceryDataSource.sync();
+            this.close();
         },
         close: function() {
             $("#add").data("kendoMobileModalView").close();
-            this.grocery = "";
+            $("input").val("");
         }
     });
 
