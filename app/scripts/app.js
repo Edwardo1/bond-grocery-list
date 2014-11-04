@@ -19,7 +19,7 @@
 
     function initialize() {
         var app = new kendo.mobile.Application(document.body, {
-            skin: "flat",
+            skin: "material",
             transition: "slide"
         });
         $("#grocery-list").kendoMobileListView({
