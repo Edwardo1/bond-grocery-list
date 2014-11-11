@@ -19,7 +19,7 @@
 
     function initialize() {
         var app = new kendo.mobile.Application(document.body, {
-            skin: "material",
+            skin: "flat",
             transition: "slide"
         });
         $("#grocery-list").kendoMobileListView({
@@ -46,6 +46,8 @@
     });
 
     window.loginView = kendo.observable({
+        username: "tjvantoll",
+        password: "password",
         submit: function() {
             if (!this.username) {
                 navigator.notification.alert("Username is required.");
