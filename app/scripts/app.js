@@ -22,7 +22,7 @@
 
     window.addView = kendo.observable({
         add: function() {
-            if (this.grocery.trim() === "") {
+            if (!this.grocery) {
                 navigator.notification.alert("Please provide a grocery.");
                 return;
             }
