@@ -1,7 +1,7 @@
 {
 	"ProjectName": "bond-app",
 	"projectVersion": 1,
-	"AppIdentifier": "com.telerik.bondapp",
+	"AppIdentifier": "com.tjvantoll.grocerylist",
 	"DisplayName": "bond-app",
 	"Author": "",
 	"Description": "",
